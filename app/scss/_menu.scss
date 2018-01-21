@@ -1,0 +1,170 @@
+//menu
+@import "variables";
+
+/* basically all styling from now on */
+.menu_toggle {
+  z-index: 900;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+  cursor: pointer;
+  width: 100px;
+  height: 80px;
+  background-color: $bg_color_go-to-shop;
+  border-bottom-right-radius: 100%;
+
+  &:active {
+    i {
+      opacity: 0.8
+    }
+  }
+  i {
+    color: $whitey;
+  }
+  .menu_open,
+  .menu_close {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -15px;
+    margin-left: -12px;
+    transition: transform .7s $snap;
+  }
+  .menu_open {
+    transform-origin: -100px -100px;
+  }
+  .menu_close {
+    transform: rotate(20deg);
+    transform-origin: -100px -160px;
+  }
+}
+.menu_items {
+  position: fixed;
+  bottom: 0;
+  left: 50px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  li {
+    height: 40px;
+    margin-bottom: 30px;
+    transform: translateX(-400px);
+    transition: transform .7s 0s $snap;
+
+    &:nth-child(2){
+      margin-left: 40px;
+    }
+    &:nth-child(3){
+      margin-left: 80px;
+    }
+    &:nth-child(4){
+      margin-left: 120px;
+    }
+    &:nth-child(5){
+      margin-left: 160px;
+    }
+    &:last-child {
+      margin-left: 200px;
+    }
+  }
+  a {
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: white;
+    background-color: rgba(0,0,0,0.5);
+    transition: color .2s;
+
+    &:hover {
+      color: $whitey;
+      .icon {
+        &:after {
+          border-color: $red;
+        }
+      }
+    }
+    &:active {
+      .icon {
+        color: $red;
+      }
+    }
+  }
+}
+
+
+/* Let's open up the menu */
+.shazam {
+  .content {
+    transform: rotate(-30deg);
+  }
+
+  // this will show hidden content overflow when rotated,
+  // but will result in a jump, if you've already scrolled down the content
+  // plus, you will lose your current reading position
+  // fixable with JS, not gonna bother
+
+  /*.content_inner {
+    height: 100%;
+  }*/
+
+  .menu_open {
+    transform: rotate(-20deg);
+  }
+  .menu_close {
+    transform: rotate(0);
+  }
+
+  .menu_items {
+    li {
+      transform: translateX(0);
+      transition: transform .35s .45s $bounce;
+
+      &:nth-child(2){
+        transition-delay: .47s;
+      }
+      &:nth-child(3){
+        transition-delay: .48s;
+      }
+    }
+  }
+}
+
+.menu_responsive {
+  display: none;
+}
+
+//menu bar
+
+.menu_main {
+  width: 40%;
+  min-width: 620px;
+  margin: 0 auto;
+  position: relative;
+  top: 28px;
+  .menu_main_items {
+    @include flexbox;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    li {
+      list-style: none;
+      a {
+        text-decoration: none;
+        font-family: $font-family;
+        font-weight: $bold;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        color: $color_menu;
+      }
+      .logo_main {
+        width: 94px;
+        height: 85px;
+      }
+    }
+    .first_child {
+      margin-left: -40px;
+    }
+  }
+}

@@ -1,0 +1,449 @@
+@import "variables";
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+
+.main {
+  overflow: hidden;
+}
+
+//header
+header {
+  height: 100vh;
+  @include background-center("../images/bg-top.png");
+}
+
+.about_us {
+  width: 100%;
+  height: auto;
+  background-color: $bg_color_about-us;
+  @include flexbox;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .content_center {
+    margin: 100px 0;
+    height: auto;
+    width: 80%;
+    @include flexbox;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.title {
+  font-family: $font-family;
+  font-weight: $bold;
+  text-transform: uppercase;
+  color: $color_section-title;
+  text-align: center;
+}
+
+.text {
+  font-family: $font-family;
+  font-weight: $normal;
+  color: $color_section-text;
+  text-align: center;
+}
+
+.work {
+  background-color: $bg_color_go-to-shop;
+}
+
+.bike {
+  width: 100%;
+  min-height: 500px;
+  @include flexbox;
+}
+
+
+.photo_container-bg {
+  overflow: hidden;
+}
+
+.bike1-bigger {
+  width: 100%;
+  height: 100%;
+  @include background-center($image_dir+"bike1-bigger.png");
+  @include bg-transition("bike1-bigger-hover");
+}
+
+
+.bike_description {
+  @include flexbox;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.description {
+  background-color: $bg_color_bikes-desc;
+  .content_center {
+    @include flexbox;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.underline {
+  z-index: 30;
+  background-color: $bg_color_bottom-section-line;
+}
+
+.arrow {
+  z-index: 20;
+  background-color: $bg_color_bikes-desc;
+  position: relative;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.photo_container-sm {
+  height: 40%;
+  margin-top: -20px;
+  overflow: hidden;
+}
+
+.bike1-smaller {
+  width: 100%;
+  height: 100%;
+  @include background-center($image_dir+"bike1-smaller.png");
+  @include bg-transition("bike1-smaller");
+}
+
+
+
+.bike2-smaller {
+  width: 100%;
+  height: 100%;
+  @include background-center($image_dir+"bike2-smaller.png");
+  @include bg-transition("bike2-smaller");
+}
+
+.bike2-bigger {
+  width: 100%;
+  height: 100%;
+  @include background-center($image_dir+"bike2-bigger.png");
+  @include bg-transition("bike2-bigger-hover")
+}
+
+
+.photo_container-side {
+  overflow: hidden;
+}
+
+.left_column {
+  width: 100%;
+  height: 100%;
+  @include background-center($image_dir+"bike3-bigger-element.png");
+  @include bg-transition("bike3-bigger-element-hover");
+}
+
+
+.right_column {
+  width: 100%;
+  height: 100%;
+  @include background-center($image_dir+"bike3-bigger-full.png");
+  @include bg-transition("bike3-bigger-full");
+}
+
+.bike3-smaller {
+  width: 100%;
+  height: 100%;
+  @include background-center($image_dir+"bike3-smaller.png");
+  @include bg-transition("bike3-smaller");
+}
+
+.twitter {
+  background-color: $bg_color_slider;
+  @include flexbox;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.tweetbox {
+  height: 55%;
+  width: 70%;
+  max-width: 1200px;
+}
+
+
+.slide {
+  width: 100%;
+  height: 100%;
+  @include flexbox;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  .title {
+    text-transform: none;
+    a {
+      color: $color_section-title;
+      text-decoration: none;
+    }
+    span {
+      font-weight: 300;
+    }
+  }
+  .text {
+    font-style: italic;
+  }
+}
+
+.slide {
+  display: none;
+}
+
+.dotbox {
+  position: relative;
+  top: 30px;
+  @include flexbox;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dot {
+  border-radius: 50%;
+  border: 1.5px solid $color_section-text;
+  -webkit-transition: background-color 0.8s ease;
+  -moz-transition: background-color 0.8s ease;
+  -o-transition: background-color 0.8s ease;
+  transition: background-color 0.8s ease;
+}
+
+.active {
+  background-color: $color_section-text;
+}
+
+.fading {
+  -webkit-animation-name: fading;
+  -moz-animation-name: fading;
+  -o-animation-name: fading;
+  animation-name: fading;
+  -webkit-animation-duration: 1.5s;
+  -moz-animation-duration: 1.5s;
+  -o-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+}
+
+
+.shop {
+  background-color: $bg_color_go-to-shop;
+  height: auto;
+}
+
+.photo_box {
+  width: 100%;
+  @include flexbox;
+  .left_box {
+    @include flexbox;
+    .top_box {
+      @include flexbox;
+      .bike1 {
+        @include background-center("../images/shop-img1.png");
+        &:hover {
+          .shop_hover {
+            visibility: visible;
+          }
+        }
+      }
+      .bike2 {
+        @include background-center("../images/shop-img2.png");
+        &:hover {
+          .shop_hover {
+            visibility: visible;
+          }
+        }
+      }
+    }
+    .bike3 {
+      @include background-center("../images/shop-img3.png");
+      &:hover {
+        .shop_hover {
+          visibility: visible;
+        }
+      }
+    }
+  }//left_box
+  .center_box {
+    @include flexbox;
+    .bike4 {
+      @include background-center("../images/shop-img4.png");
+      &:hover {
+        .shop_hover {
+          visibility: visible;
+        }
+      }
+    }
+    .bike5 {
+      @include background-center("../images/shop-img5.png");
+      &:hover {
+        .shop_hover {
+          visibility: visible;
+        }
+      }
+    }
+  }//center_box
+
+  .right_box {
+    background-color: pink;
+    @include flexbox;
+    .bike6 {
+      @include background-center("../images/shop-img6.png");
+      &:hover {
+        .shop_hover {
+          visibility: visible;
+        }
+      }
+    }
+    .bottom {
+      @include flexbox;
+      .bike7 {
+        @include background-center("../images/shop-img7.png");
+        &:hover {
+          .shop_hover {
+            visibility: visible;
+          }
+        }
+      }
+      .bike8 {
+        @include background-center("../images/shop-img8.png");
+        &:hover {
+          .shop_hover {
+            visibility: visible;
+          }
+        }
+      }
+    }//bottom
+  }//right_box
+}//photo_box
+
+.shop_hover {
+  width: 100%;
+  height: 100%;
+  background-color: $bg_color_shop-cover;
+  opacity: .85;
+  @include flexbox;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  .icon_bike {
+    position: relative;
+    top: 20px;
+    width: 51px;
+    height: 30px;
+  }
+  .title {
+    color: rgb(255,255,255);
+  }
+}
+
+
+.shop_banner {
+  width: 100%;
+  @include flexbox;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: $bg_color_go-to-shop;
+}
+
+.shop-btn {
+  border: 1px solid white;
+  color: white;
+  font-family: $font-family;
+  font-weight: 400;
+  -webkit-transition: font-size 0.2s;
+  -moz-transition: font-size 0.2s;
+  -ms-transition: font-size 0.2s;
+  -o-transition: font-size 0.2s;
+  transition: font-size 0.2s;
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+
+.mailing {
+  background-color: $bg_color_email-form;
+  @include flexbox;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .text {
+    font-style: italic;
+    font-weight: 400;
+  }
+  .custom-input {
+    font-family: $font-family;
+    font-style: italic;
+  }
+  .form-submit {
+    cursor: pointer;
+    background-color: $bg_color_shop-cover;
+    border: none;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: $font-family;
+    font-weight: 300;
+    color: $bg_color_email-form;
+    &:hover {
+      background-color: $bg-color_go-to-shop;
+    }
+  }
+}
+
+
+.footer {
+  background-color: $bg_color_footer;
+  @include flexbox;
+  .content {
+    max-width: 1200px;
+    @include flexbox;
+  }
+}
+
+.adress {
+  height: auto;
+  .text {
+    font-family: $font-family;
+    .bold {
+      font-weight: $bold;
+    }
+    a:hover {
+      color: $color_section-title;
+      text-decoration: none;
+    }
+  }
+}
+
+.social_media {
+  height: auto;
+  @include flexbox;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.signature {
+  height: auto;
+  font-family: $font-family;
+  font-weight: 400;
+  font-style: italic;
+  color: $color_section-text;
+}
