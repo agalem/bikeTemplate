@@ -1,0 +1,2046 @@
+@-webkit-keyframes fading {
+  from {
+    opacity: 0.7; }
+  to {
+    opacity: 1; } }
+
+@keyframes fading {
+  from {
+    opacity: 0.7; }
+  to {
+    opacity: 1; } }
+
+@-webkit-keyframes fading {
+  from {
+    opacity: 0.7; }
+  to {
+    opacity: 1; } }
+
+@keyframes fading {
+  from {
+    opacity: 0.7; }
+  to {
+    opacity: 1; } }
+
+/* basically all styling from now on */
+.menu_toggle {
+  z-index: 900;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+  cursor: pointer;
+  width: 100px;
+  height: 80px;
+  background-color: #282f35;
+  border-bottom-right-radius: 100%; }
+  .menu_toggle:active i {
+    opacity: 0.8; }
+  .menu_toggle i {
+    color: #f0f0f0; }
+  .menu_toggle .menu_open,
+  .menu_toggle .menu_close {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -15px;
+    margin-left: -12px;
+    transition: transform 0.7s cubic-bezier(1, 0.005, 0.24, 1); }
+  .menu_toggle .menu_open {
+    transform-origin: -100px -100px; }
+  .menu_toggle .menu_close {
+    transform: rotate(20deg);
+    transform-origin: -100px -160px; }
+
+.menu_items {
+  position: fixed;
+  bottom: 0;
+  left: 50px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+  .menu_items li {
+    height: 40px;
+    margin-bottom: 30px;
+    transform: translateX(-400px);
+    transition: transform 0.7s 0s cubic-bezier(1, 0.005, 0.24, 1); }
+    .menu_items li:nth-child(2) {
+      margin-left: 40px; }
+    .menu_items li:nth-child(3) {
+      margin-left: 80px; }
+    .menu_items li:nth-child(4) {
+      margin-left: 120px; }
+    .menu_items li:nth-child(5) {
+      margin-left: 160px; }
+    .menu_items li:last-child {
+      margin-left: 200px; }
+  .menu_items a {
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: color .2s; }
+    .menu_items a:hover {
+      color: #f0f0f0; }
+      .menu_items a:hover .icon:after {
+        border-color: #F37272; }
+    .menu_items a:active .icon {
+      color: #F37272; }
+
+/* Let's open up the menu */
+.shazam {
+  /*.content_inner {
+    height: 100%;
+  }*/ }
+  .shazam .content {
+    transform: rotate(-30deg); }
+  .shazam .menu_open {
+    transform: rotate(-20deg); }
+  .shazam .menu_close {
+    transform: rotate(0); }
+  .shazam .menu_items li {
+    transform: translateX(0);
+    transition: transform 0.35s 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+    .shazam .menu_items li:nth-child(2) {
+      transition-delay: .47s; }
+    .shazam .menu_items li:nth-child(3) {
+      transition-delay: .48s; }
+
+.menu_responsive {
+  display: none; }
+
+.menu_main {
+  width: 40%;
+  min-width: 620px;
+  margin: 0 auto;
+  position: relative;
+  top: 28px; }
+  .menu_main .menu_main_items {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; }
+    .menu_main .menu_main_items li {
+      list-style: none; }
+      .menu_main .menu_main_items li a {
+        text-decoration: none;
+        font-family: "Lato", sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        color: #4d4959; }
+      .menu_main .menu_main_items li .logo_main {
+        width: 94px;
+        height: 85px; }
+    .menu_main .menu_main_items .first_child {
+      margin-left: -40px; }
+
+@-webkit-keyframes fading {
+  from {
+    opacity: 0.7; }
+  to {
+    opacity: 1; } }
+
+@keyframes fading {
+  from {
+    opacity: 0.7; }
+  to {
+    opacity: 1; } }
+
+* {
+  box-sizing: border-box; }
+
+html,
+body {
+  height: 100%; }
+
+.main {
+  overflow: hidden; }
+
+header {
+  height: 100vh;
+  background: url("../images/bg-top.png") center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+.about_us {
+  width: 100%;
+  height: auto;
+  background-color: #f7f7f7;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .about_us .content_center {
+    margin: 100px 0;
+    height: auto;
+    width: 80%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; }
+
+.title {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #353738;
+  text-align: center; }
+
+.text {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  color: #848789;
+  text-align: center; }
+
+.work {
+  background-color: #282f35; }
+
+.bike {
+  width: 100%;
+  min-height: 500px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.photo_container-bg {
+  overflow: hidden; }
+
+.bike1-bigger {
+  width: 100%;
+  height: 100%;
+  background: url("../images/bike1-bigger.png") center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  cursor: pointer;
+  -webkit-transition: transform 3s;
+  -moz-transition: transform 3s;
+  -ms-transition: transform 3s;
+  -o-transition: transform 3s;
+  transition: transform 3s; }
+  .bike1-bigger:hover {
+    background: url("../images/bike1-bigger-hover.png") center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2); }
+
+.bike_description {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden; }
+
+.description {
+  background-color: white; }
+  .description .content_center {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; }
+
+.underline {
+  z-index: 30;
+  background-color: #353738; }
+
+.arrow {
+  z-index: 20;
+  background-color: white;
+  position: relative;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg); }
+
+.photo_container-sm {
+  height: 40%;
+  margin-top: -20px;
+  overflow: hidden; }
+
+.bike1-smaller {
+  width: 100%;
+  height: 100%;
+  background: url("../images/bike1-smaller.png") center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  cursor: pointer;
+  -webkit-transition: transform 3s;
+  -moz-transition: transform 3s;
+  -ms-transition: transform 3s;
+  -o-transition: transform 3s;
+  transition: transform 3s; }
+  .bike1-smaller:hover {
+    background: url("../images/bike1-smaller.png") center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2); }
+
+.bike2-smaller {
+  width: 100%;
+  height: 100%;
+  background: url("../images/bike2-smaller.png") center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  cursor: pointer;
+  -webkit-transition: transform 3s;
+  -moz-transition: transform 3s;
+  -ms-transition: transform 3s;
+  -o-transition: transform 3s;
+  transition: transform 3s; }
+  .bike2-smaller:hover {
+    background: url("../images/bike2-smaller.png") center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2); }
+
+.bike2-bigger {
+  width: 100%;
+  height: 100%;
+  background: url("../images/bike2-bigger.png") center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  cursor: pointer;
+  -webkit-transition: transform 3s;
+  -moz-transition: transform 3s;
+  -ms-transition: transform 3s;
+  -o-transition: transform 3s;
+  transition: transform 3s; }
+  .bike2-bigger:hover {
+    background: url("../images/bike2-bigger-hover.png") center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2); }
+
+.photo_container-side {
+  overflow: hidden; }
+
+.left_column {
+  width: 100%;
+  height: 100%;
+  background: url("../images/bike3-bigger-element.png") center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  cursor: pointer;
+  -webkit-transition: transform 3s;
+  -moz-transition: transform 3s;
+  -ms-transition: transform 3s;
+  -o-transition: transform 3s;
+  transition: transform 3s; }
+  .left_column:hover {
+    background: url("../images/bike3-bigger-element-hover.png") center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2); }
+
+.right_column {
+  width: 100%;
+  height: 100%;
+  background: url("../images/bike3-bigger-full.png") center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  cursor: pointer;
+  -webkit-transition: transform 3s;
+  -moz-transition: transform 3s;
+  -ms-transition: transform 3s;
+  -o-transition: transform 3s;
+  transition: transform 3s; }
+  .right_column:hover {
+    background: url("../images/bike3-bigger-full.png") center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2); }
+
+.bike3-smaller {
+  width: 100%;
+  height: 100%;
+  background: url("../images/bike3-smaller.png") center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  cursor: pointer;
+  -webkit-transition: transform 3s;
+  -moz-transition: transform 3s;
+  -ms-transition: transform 3s;
+  -o-transition: transform 3s;
+  transition: transform 3s; }
+  .bike3-smaller:hover {
+    background: url("../images/bike3-smaller.png") center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2); }
+
+.twitter {
+  background-color: #f7f7f7;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+
+.tweetbox {
+  height: 55%;
+  width: 70%;
+  max-width: 1200px; }
+
+.slide {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around; }
+  .slide .title {
+    text-transform: none; }
+    .slide .title a {
+      color: #353738;
+      text-decoration: none; }
+    .slide .title span {
+      font-weight: 300; }
+  .slide .text {
+    font-style: italic; }
+
+.slide {
+  display: none; }
+
+.dotbox {
+  position: relative;
+  top: 30px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; }
+
+.dot {
+  border-radius: 50%;
+  border: 1.5px solid #848789;
+  -webkit-transition: background-color 0.8s ease;
+  -moz-transition: background-color 0.8s ease;
+  -o-transition: background-color 0.8s ease;
+  transition: background-color 0.8s ease; }
+
+.active {
+  background-color: #848789; }
+
+.fading {
+  -webkit-animation-name: fading;
+  -moz-animation-name: fading;
+  -o-animation-name: fading;
+  animation-name: fading;
+  -webkit-animation-duration: 1.5s;
+  -moz-animation-duration: 1.5s;
+  -o-animation-duration: 1.5s;
+  animation-duration: 1.5s; }
+
+.shop {
+  background-color: #282f35;
+  height: auto; }
+
+.photo_box {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  .photo_box .left_box {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+    .photo_box .left_box .top_box {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex; }
+      .photo_box .left_box .top_box .bike1 {
+        background: url("../images/shop-img1.png") center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover; }
+        .photo_box .left_box .top_box .bike1:hover .shop_hover {
+          visibility: visible; }
+      .photo_box .left_box .top_box .bike2 {
+        background: url("../images/shop-img2.png") center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover; }
+        .photo_box .left_box .top_box .bike2:hover .shop_hover {
+          visibility: visible; }
+    .photo_box .left_box .bike3 {
+      background: url("../images/shop-img3.png") center center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover; }
+      .photo_box .left_box .bike3:hover .shop_hover {
+        visibility: visible; }
+  .photo_box .center_box {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+    .photo_box .center_box .bike4 {
+      background: url("../images/shop-img4.png") center center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover; }
+      .photo_box .center_box .bike4:hover .shop_hover {
+        visibility: visible; }
+    .photo_box .center_box .bike5 {
+      background: url("../images/shop-img5.png") center center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover; }
+      .photo_box .center_box .bike5:hover .shop_hover {
+        visibility: visible; }
+  .photo_box .right_box {
+    background-color: pink;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+    .photo_box .right_box .bike6 {
+      background: url("../images/shop-img6.png") center center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover; }
+      .photo_box .right_box .bike6:hover .shop_hover {
+        visibility: visible; }
+    .photo_box .right_box .bottom {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex; }
+      .photo_box .right_box .bottom .bike7 {
+        background: url("../images/shop-img7.png") center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover; }
+        .photo_box .right_box .bottom .bike7:hover .shop_hover {
+          visibility: visible; }
+      .photo_box .right_box .bottom .bike8 {
+        background: url("../images/shop-img8.png") center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover; }
+        .photo_box .right_box .bottom .bike8:hover .shop_hover {
+          visibility: visible; }
+
+.shop_hover {
+  width: 100%;
+  height: 100%;
+  background-color: #64c29e;
+  opacity: .85;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden; }
+  .shop_hover .icon_bike {
+    position: relative;
+    top: 20px;
+    width: 51px;
+    height: 30px; }
+  .shop_hover .title {
+    color: white; }
+
+.shop_banner {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: #282f35; }
+
+.shop-btn {
+  border: 1px solid white;
+  color: white;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  -webkit-transition: font-size 0.2s;
+  -moz-transition: font-size 0.2s;
+  -ms-transition: font-size 0.2s;
+  -o-transition: font-size 0.2s;
+  transition: font-size 0.2s; }
+  .shop-btn:hover {
+    color: white;
+    text-decoration: none; }
+
+.mailing {
+  background-color: white;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .mailing .text {
+    font-style: italic;
+    font-weight: 400; }
+  .mailing .custom-input {
+    font-family: "Lato", sans-serif;
+    font-style: italic; }
+  .mailing .form-submit {
+    cursor: pointer;
+    background-color: #64c29e;
+    border: none;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    color: white; }
+    .mailing .form-submit:hover {
+      background-color: #282f35; }
+
+.footer {
+  background-color: #f7f7f7;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  .footer .content {
+    max-width: 1200px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+
+.adress {
+  height: auto; }
+  .adress .text {
+    font-family: "Lato", sans-serif; }
+    .adress .text .bold {
+      font-weight: 700; }
+    .adress .text a:hover {
+      color: #353738;
+      text-decoration: none; }
+
+.social_media {
+  height: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+
+.signature {
+  height: auto;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  color: #848789; }
+
+@-webkit-keyframes fading {
+  from {
+    opacity: 0.7; }
+  to {
+    opacity: 1; } }
+
+@keyframes fading {
+  from {
+    opacity: 0.7; }
+  to {
+    opacity: 1; } }
+
+@media all and (min-width: 992px) and (max-width: 1440px) {
+  .icon_new-generation {
+    width: 52px;
+    height: 43px; }
+  .title {
+    font-size: 1.2rem;
+    margin: 25px 0; }
+  .text {
+    font-size: 1rem; }
+  .bike {
+    flex-direction: row; }
+  .photo_container-bg {
+    height: 500px;
+    width: 65%; }
+  .bike_description {
+    width: 35%;
+    height: 500px; }
+  .icon_oliva-bike {
+    width: 41px;
+    height: 30px; }
+  .description {
+    height: 60%;
+    padding: 20px; }
+    .description .content_center .title {
+      font-size: 1rem; }
+    .description .content_center .text {
+      font-size: 0.8rem;
+      width: 80%; }
+  .underline {
+    height: 1px;
+    width: 60px; }
+  .arrow {
+    width: 20px;
+    height: 20px;
+    top: -10px;
+    left: 48%; }
+  .icon_boriosa {
+    width: 32px;
+    height: 32px; }
+  .photo_container-side {
+    height: 500px;
+    width: 100%; }
+  .center_column {
+    height: 500px;
+    width: 86%; }
+  .icon_hulot {
+    width: 23px;
+    height: 41px; }
+  .twitter {
+    height: 400px; }
+  .icon_twitter {
+    width: 32px;
+    height: 27px; }
+  .slide .title {
+    font-size: 1rem; }
+  .dotbox {
+    width: 70px;
+    height: 13px; }
+  .dot {
+    height: 11px;
+    width: 11px; }
+  .photo_box {
+    height: 500px;
+    flex-direction: row; }
+    .photo_box .left_box {
+      height: 500px;
+      width: 100%;
+      flex-direction: column; }
+      .photo_box .left_box .top_box {
+        width: 100%;
+        height: 50%;
+        flex-direction: row; }
+        .photo_box .left_box .top_box .bike1 {
+          height: 100%;
+          width: 50%; }
+        .photo_box .left_box .top_box .bike2 {
+          height: 100%;
+          width: 50%; }
+      .photo_box .left_box .bike3 {
+        height: 50%;
+        width: 100%; }
+    .photo_box .center_box {
+      height: 500px;
+      width: 100%;
+      flex-direction: row; }
+      .photo_box .center_box .bike4 {
+        height: 100%;
+        width: 50%; }
+      .photo_box .center_box .bike5 {
+        height: 100%;
+        width: 50%; }
+    .photo_box .right_box {
+      height: 500px;
+      width: 100%;
+      flex-direction: column; }
+      .photo_box .right_box .bike6 {
+        width: 100%;
+        height: 50%; }
+      .photo_box .right_box .bottom {
+        width: 100%;
+        height: 50%;
+        flex-direction: row; }
+        .photo_box .right_box .bottom .bike7 {
+          width: 50%;
+          height: 100%; }
+        .photo_box .right_box .bottom .bike8 {
+          width: 50%;
+          height: 100%; }
+  .shop_hover .title {
+    font-size: 0.6rem; }
+  .shop_banner {
+    height: 250px; }
+  .shop-btn {
+    width: 300px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1rem; }
+    .shop-btn:hover {
+      font-size: 1.2rem; }
+  .logo {
+    width: 94px;
+    height: 85px; }
+  .mailing {
+    height: 400px; }
+    .mailing .logo {
+      position: relative;
+      bottom: 30px; }
+    .mailing .text {
+      font-size: 1.2rem; }
+    .mailing .custom-input {
+      width: 300px;
+      height: 40px;
+      font-size: 1rem;
+      padding-left: 5px; }
+    .mailing .form-submit {
+      height: 40px;
+      width: 70px;
+      top: 2px;
+      font-size: 1.3rem; }
+  .footer_icon {
+    width: 35px;
+    height: 34px;
+    padding: 3px; }
+  .logo_yebo {
+    width: 55px;
+    height: 36px; }
+  .footer {
+    height: 250px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; }
+    .footer .content {
+      height: 50%;
+      width: 80%;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between; }
+  .adress {
+    width: 235px; }
+    .adress .text {
+      font-size: .8rem;
+      text-align: left; }
+  .social_media {
+    width: 235px; }
+  .signature {
+    width: 235px;
+    font-size: .8rem; } }
+
+@-webkit-keyframes fading {
+  from {
+    opacity: 0.7; }
+  to {
+    opacity: 1; } }
+
+@keyframes fading {
+  from {
+    opacity: 0.7; }
+  to {
+    opacity: 1; } }
+
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .icon_new-generation {
+    width: 52px;
+    height: 43px; }
+  .title {
+    font-size: 1.2rem;
+    margin: 25px 0; }
+  .text {
+    font-size: 1rem; }
+  .bike {
+    flex-direction: row; }
+  .photo_container-bg {
+    height: 600px;
+    width: 65%; }
+  .bike_description {
+    width: 35%;
+    height: 600px; }
+  .icon_oliva-bike {
+    width: 41px;
+    height: 30px; }
+  .description {
+    height: 60%;
+    padding: 20px; }
+    .description .content_center .title {
+      font-size: 1rem; }
+    .description .content_center .text {
+      font-size: 0.8rem;
+      width: 80%; }
+  .underline {
+    height: 1px;
+    width: 60px; }
+  .arrow {
+    width: 20px;
+    height: 20px;
+    top: -10px;
+    left: 48%; }
+  .icon_boriosa {
+    width: 32px;
+    height: 32px; }
+  .photo_container-side {
+    height: 600px;
+    width: 100%; }
+  .center_column {
+    height: 600px;
+    width: 86%; }
+  .icon_hulot {
+    width: 23px;
+    height: 41px; }
+  .twitter {
+    height: 400px; }
+  .icon_twitter {
+    width: 32px;
+    height: 27px; }
+  .slide .title {
+    font-size: 1rem; }
+  .dotbox {
+    width: 70px;
+    height: 13px; }
+  .dot {
+    height: 11px;
+    width: 11px; }
+  .photo_box {
+    height: 1100px;
+    flex-direction: column; }
+    .photo_box .left_box {
+      height: 500px;
+      width: 100%;
+      flex-direction: column; }
+      .photo_box .left_box .top_box {
+        width: 100%;
+        height: 50%;
+        flex-direction: row; }
+        .photo_box .left_box .top_box .bike1 {
+          height: 100%;
+          width: 50%; }
+        .photo_box .left_box .top_box .bike2 {
+          height: 100%;
+          width: 50%; }
+      .photo_box .left_box .bike3 {
+        height: 50%;
+        width: 100%; }
+    .photo_box .center_box {
+      height: 500px;
+      width: 100%;
+      flex-direction: row; }
+      .photo_box .center_box .bike4 {
+        height: 100%;
+        width: 50%; }
+      .photo_box .center_box .bike5 {
+        height: 100%;
+        width: 50%; }
+    .photo_box .right_box {
+      height: 500px;
+      width: 100%;
+      flex-direction: column; }
+      .photo_box .right_box .bike6 {
+        width: 100%;
+        height: 50%; }
+      .photo_box .right_box .bottom {
+        width: 100%;
+        height: 50%;
+        flex-direction: row; }
+        .photo_box .right_box .bottom .bike7 {
+          width: 50%;
+          height: 100%; }
+        .photo_box .right_box .bottom .bike8 {
+          width: 50%;
+          height: 100%; }
+  .shop_hover .title {
+    font-size: 0.6rem; }
+  .shop_banner {
+    height: 250px; }
+  .shop-btn {
+    width: 300px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1rem; }
+    .shop-btn:hover {
+      font-size: 1.2rem; }
+  .logo {
+    width: 94px;
+    height: 85px; }
+  .mailing {
+    height: 400px; }
+    .mailing .logo {
+      position: relative;
+      bottom: 30px; }
+    .mailing .text {
+      font-size: 1.2rem; }
+    .mailing .custom-input {
+      width: 300px;
+      height: 40px;
+      font-size: 1rem;
+      padding-left: 5px; }
+    .mailing .form-submit {
+      height: 40px;
+      width: 70px;
+      top: 2px;
+      font-size: 1.3rem; }
+  .footer_icon {
+    width: 35px;
+    height: 34px;
+    padding: 3px; }
+  .logo_yebo {
+    width: 55px;
+    height: 36px; }
+  .footer {
+    height: 250px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; }
+    .footer .content {
+      height: 50%;
+      width: 80%;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between; }
+  .adress {
+    width: 235px; }
+    .adress .text {
+      font-size: .8rem;
+      text-align: left; }
+  .social_media {
+    width: 235px; }
+  .signature {
+    width: 235px;
+    font-size: .8rem; } }
+
+@-webkit-keyframes fading {
+  from {
+    opacity: 0.7; }
+  to {
+    opacity: 1; } }
+
+@keyframes fading {
+  from {
+    opacity: 0.7; }
+  to {
+    opacity: 1; } }
+
+@-webkit-keyframes fading {
+  from {
+    opacity: 0.7; }
+  to {
+    opacity: 1; } }
+
+@keyframes fading {
+  from {
+    opacity: 0.7; }
+  to {
+    opacity: 1; } }
+
+/* basically all styling from now on */
+.menu_toggle {
+  z-index: 900;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+  cursor: pointer;
+  width: 100px;
+  height: 80px;
+  background-color: #282f35;
+  border-bottom-right-radius: 100%; }
+  .menu_toggle:active i {
+    opacity: 0.8; }
+  .menu_toggle i {
+    color: #f0f0f0; }
+  .menu_toggle .menu_open,
+  .menu_toggle .menu_close {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -15px;
+    margin-left: -12px;
+    transition: transform 0.7s cubic-bezier(1, 0.005, 0.24, 1); }
+  .menu_toggle .menu_open {
+    transform-origin: -100px -100px; }
+  .menu_toggle .menu_close {
+    transform: rotate(20deg);
+    transform-origin: -100px -160px; }
+
+.menu_items {
+  position: fixed;
+  bottom: 0;
+  left: 50px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+  .menu_items li {
+    height: 40px;
+    margin-bottom: 30px;
+    transform: translateX(-400px);
+    transition: transform 0.7s 0s cubic-bezier(1, 0.005, 0.24, 1); }
+    .menu_items li:nth-child(2) {
+      margin-left: 40px; }
+    .menu_items li:nth-child(3) {
+      margin-left: 80px; }
+    .menu_items li:nth-child(4) {
+      margin-left: 120px; }
+    .menu_items li:nth-child(5) {
+      margin-left: 160px; }
+    .menu_items li:last-child {
+      margin-left: 200px; }
+  .menu_items a {
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: color .2s; }
+    .menu_items a:hover {
+      color: #f0f0f0; }
+      .menu_items a:hover .icon:after {
+        border-color: #F37272; }
+    .menu_items a:active .icon {
+      color: #F37272; }
+
+/* Let's open up the menu */
+.shazam {
+  /*.content_inner {
+    height: 100%;
+  }*/ }
+  .shazam .content {
+    transform: rotate(-30deg); }
+  .shazam .menu_open {
+    transform: rotate(-20deg); }
+  .shazam .menu_close {
+    transform: rotate(0); }
+  .shazam .menu_items li {
+    transform: translateX(0);
+    transition: transform 0.35s 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+    .shazam .menu_items li:nth-child(2) {
+      transition-delay: .47s; }
+    .shazam .menu_items li:nth-child(3) {
+      transition-delay: .48s; }
+
+.menu_responsive {
+  display: none; }
+
+.menu_main {
+  width: 40%;
+  min-width: 620px;
+  margin: 0 auto;
+  position: relative;
+  top: 28px; }
+  .menu_main .menu_main_items {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; }
+    .menu_main .menu_main_items li {
+      list-style: none; }
+      .menu_main .menu_main_items li a {
+        text-decoration: none;
+        font-family: "Lato", sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        color: #4d4959; }
+      .menu_main .menu_main_items li .logo_main {
+        width: 94px;
+        height: 85px; }
+    .menu_main .menu_main_items .first_child {
+      margin-left: -40px; }
+
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+  .menu_main {
+    display: none !important; }
+  .menu_responsive {
+    display: block !important; }
+  .icon_new-generation {
+    width: 52px;
+    height: 43px; }
+  .title {
+    font-size: 1.2rem;
+    margin: 25px 0; }
+  .text {
+    font-size: 1rem; }
+  .bike {
+    flex-direction: column; }
+  .photo_container-bg {
+    height: 400px;
+    width: 100%; }
+  .bike_description {
+    width: 100%;
+    height: 400px; }
+  .icon_oliva-bike {
+    width: 41px;
+    height: 30px; }
+  .description {
+    height: 60%;
+    padding: 20px; }
+    .description .content_center .title {
+      font-size: 1rem; }
+    .description .content_center .text {
+      font-size: 0.8rem;
+      width: 80%; }
+  .underline {
+    height: 1px;
+    width: 60px; }
+  .arrow {
+    width: 20px;
+    height: 20px;
+    top: -10px;
+    left: 48%; }
+  .icon_boriosa {
+    width: 32px;
+    height: 32px; }
+  .photo_container-side {
+    height: 360px;
+    width: 100%; }
+  .center_column {
+    height: 480px;
+    width: 100%; }
+  .icon_hulot {
+    width: 23px;
+    height: 41px; }
+  .twitter {
+    height: 400px; }
+  .icon_twitter {
+    width: 32px;
+    height: 27px; }
+  .slide .title {
+    font-size: 1rem; }
+  .dotbox {
+    width: 70px;
+    height: 13px; }
+  .dot {
+    height: 11px;
+    width: 11px; }
+  .photo_box {
+    height: 1500px;
+    flex-direction: column; }
+    .photo_box .left_box {
+      height: 500px;
+      width: 100%;
+      flex-direction: column; }
+      .photo_box .left_box .top_box {
+        width: 100%;
+        height: 50%;
+        flex-direction: row; }
+        .photo_box .left_box .top_box .bike1 {
+          height: 100%;
+          width: 50%; }
+        .photo_box .left_box .top_box .bike2 {
+          height: 100%;
+          width: 50%; }
+      .photo_box .left_box .bike3 {
+        height: 50%;
+        width: 100%; }
+    .photo_box .center_box {
+      height: 500px;
+      width: 100%;
+      flex-direction: row; }
+      .photo_box .center_box .bike4 {
+        height: 100%;
+        width: 50%; }
+      .photo_box .center_box .bike5 {
+        height: 100%;
+        width: 50%; }
+    .photo_box .right_box {
+      height: 500px;
+      width: 100%;
+      flex-direction: column; }
+      .photo_box .right_box .bike6 {
+        width: 100%;
+        height: 50%; }
+      .photo_box .right_box .bottom {
+        width: 100%;
+        height: 50%;
+        flex-direction: row; }
+        .photo_box .right_box .bottom .bike7 {
+          width: 50%;
+          height: 100%; }
+        .photo_box .right_box .bottom .bike8 {
+          width: 50%;
+          height: 100%; }
+  .shop_hover .title {
+    font-size: 0.6rem; }
+  .shop_banner {
+    height: 250px; }
+  .shop-btn {
+    width: 300px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1rem; }
+    .shop-btn:hover {
+      font-size: 1.2rem; }
+  .logo {
+    width: 94px;
+    height: 85px; }
+  .mailing {
+    height: 400px; }
+    .mailing .logo {
+      position: relative;
+      bottom: 30px; }
+    .mailing .text {
+      font-size: 1.2rem; }
+    .mailing .custom-input {
+      width: 300px;
+      height: 40px;
+      font-size: 1rem;
+      padding-left: 5px; }
+    .mailing .form-submit {
+      height: 40px;
+      width: 70px;
+      top: 2px;
+      font-size: 1.3rem; }
+  .footer_icon {
+    width: 35px;
+    height: 34px;
+    padding: 3px; }
+  .logo_yebo {
+    width: 55px;
+    height: 36px; }
+  .footer {
+    height: 250px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; }
+    .footer .content {
+      height: 50%;
+      width: 80%;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between; }
+  .adress {
+    width: 235px; }
+    .adress .text {
+      font-size: .8rem;
+      text-align: left; }
+  .social_media {
+    width: 235px; }
+  .signature {
+    width: 235px;
+    font-size: .8rem; }
+  .logo_main_min {
+    position: absolute;
+    top: 20px;
+    left: 42.5vw; } }
+
+@-webkit-keyframes fading {
+  from {
+    opacity: 0.7; }
+  to {
+    opacity: 1; } }
+
+@keyframes fading {
+  from {
+    opacity: 0.7; }
+  to {
+    opacity: 1; } }
+
+@-webkit-keyframes fading {
+  from {
+    opacity: 0.7; }
+  to {
+    opacity: 1; } }
+
+@keyframes fading {
+  from {
+    opacity: 0.7; }
+  to {
+    opacity: 1; } }
+
+/* basically all styling from now on */
+.menu_toggle {
+  z-index: 900;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+  cursor: pointer;
+  width: 100px;
+  height: 80px;
+  background-color: #282f35;
+  border-bottom-right-radius: 100%; }
+  .menu_toggle:active i {
+    opacity: 0.8; }
+  .menu_toggle i {
+    color: #f0f0f0; }
+  .menu_toggle .menu_open,
+  .menu_toggle .menu_close {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -15px;
+    margin-left: -12px;
+    transition: transform 0.7s cubic-bezier(1, 0.005, 0.24, 1); }
+  .menu_toggle .menu_open {
+    transform-origin: -100px -100px; }
+  .menu_toggle .menu_close {
+    transform: rotate(20deg);
+    transform-origin: -100px -160px; }
+
+.menu_items {
+  position: fixed;
+  bottom: 0;
+  left: 50px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+  .menu_items li {
+    height: 40px;
+    margin-bottom: 30px;
+    transform: translateX(-400px);
+    transition: transform 0.7s 0s cubic-bezier(1, 0.005, 0.24, 1); }
+    .menu_items li:nth-child(2) {
+      margin-left: 40px; }
+    .menu_items li:nth-child(3) {
+      margin-left: 80px; }
+    .menu_items li:nth-child(4) {
+      margin-left: 120px; }
+    .menu_items li:nth-child(5) {
+      margin-left: 160px; }
+    .menu_items li:last-child {
+      margin-left: 200px; }
+  .menu_items a {
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: color .2s; }
+    .menu_items a:hover {
+      color: #f0f0f0; }
+      .menu_items a:hover .icon:after {
+        border-color: #F37272; }
+    .menu_items a:active .icon {
+      color: #F37272; }
+
+/* Let's open up the menu */
+.shazam {
+  /*.content_inner {
+    height: 100%;
+  }*/ }
+  .shazam .content {
+    transform: rotate(-30deg); }
+  .shazam .menu_open {
+    transform: rotate(-20deg); }
+  .shazam .menu_close {
+    transform: rotate(0); }
+  .shazam .menu_items li {
+    transform: translateX(0);
+    transition: transform 0.35s 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+    .shazam .menu_items li:nth-child(2) {
+      transition-delay: .47s; }
+    .shazam .menu_items li:nth-child(3) {
+      transition-delay: .48s; }
+
+.menu_responsive {
+  display: none; }
+
+.menu_main {
+  width: 40%;
+  min-width: 620px;
+  margin: 0 auto;
+  position: relative;
+  top: 28px; }
+  .menu_main .menu_main_items {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; }
+    .menu_main .menu_main_items li {
+      list-style: none; }
+      .menu_main .menu_main_items li a {
+        text-decoration: none;
+        font-family: "Lato", sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        color: #4d4959; }
+      .menu_main .menu_main_items li .logo_main {
+        width: 94px;
+        height: 85px; }
+    .menu_main .menu_main_items .first_child {
+      margin-left: -40px; }
+
+@media all and (max-width: 575px) {
+  .menu_main {
+    display: none !important; }
+  .menu_responsive {
+    display: block !important; }
+  .icon_new-generation {
+    width: 52px;
+    height: 43px; }
+  .title {
+    font-size: 1.2rem;
+    margin: 25px 0; }
+  .text {
+    font-size: 1rem; }
+  .bike {
+    flex-direction: column; }
+  .photo_container-bg {
+    height: 400px;
+    width: 100%; }
+  .bike_description {
+    width: 100%;
+    height: 540px; }
+  .icon_oliva-bike {
+    width: 41px;
+    height: 30px; }
+  .description {
+    height: 60%;
+    padding: 20px; }
+    .description .content_center .title {
+      font-size: 1rem; }
+    .description .content_center .text {
+      font-size: 0.8rem;
+      width: 80%; }
+  .underline {
+    height: 1px;
+    width: 60px; }
+  .arrow {
+    width: 20px;
+    height: 20px;
+    top: -10px;
+    left: 48%; }
+  .icon_boriosa {
+    width: 32px;
+    height: 32px; }
+  .photo_container-side {
+    height: 360px;
+    width: 100%; }
+  .center_column {
+    height: 540px;
+    width: 100%; }
+  .icon_hulot {
+    width: 23px;
+    height: 41px; }
+  .twitter {
+    height: 400px; }
+  .icon_twitter {
+    width: 32px;
+    height: 27px; }
+  .slide .title {
+    font-size: 1rem; }
+  .dotbox {
+    width: 70px;
+    height: 13px; }
+  .dot {
+    height: 11px;
+    width: 11px; }
+  .photo_box {
+    height: 1100px;
+    flex-direction: column; }
+    .photo_box .left_box {
+      height: 500px;
+      width: 100%;
+      flex-direction: column; }
+      .photo_box .left_box .top_box {
+        width: 100%;
+        height: 50%;
+        flex-direction: row; }
+        .photo_box .left_box .top_box .bike1 {
+          height: 100%;
+          width: 50%; }
+        .photo_box .left_box .top_box .bike2 {
+          height: 100%;
+          width: 50%; }
+      .photo_box .left_box .bike3 {
+        height: 50%;
+        width: 100%; }
+    .photo_box .center_box {
+      height: 500px;
+      width: 100%;
+      flex-direction: row; }
+      .photo_box .center_box .bike4 {
+        height: 100%;
+        width: 50%; }
+      .photo_box .center_box .bike5 {
+        height: 100%;
+        width: 50%; }
+    .photo_box .right_box {
+      height: 500px;
+      width: 100%;
+      flex-direction: column; }
+      .photo_box .right_box .bike6 {
+        width: 100%;
+        height: 50%; }
+      .photo_box .right_box .bottom {
+        width: 100%;
+        height: 50%;
+        flex-direction: row; }
+        .photo_box .right_box .bottom .bike7 {
+          width: 50%;
+          height: 100%; }
+        .photo_box .right_box .bottom .bike8 {
+          width: 50%;
+          height: 100%; }
+  .shop_hover .title {
+    font-size: 0.6rem; }
+  .shop_banner {
+    height: 250px; }
+  .shop-btn {
+    width: 300px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1rem; }
+    .shop-btn:hover {
+      font-size: 1.2rem; }
+  .logo {
+    width: 94px;
+    height: 85px; }
+  .mailing {
+    height: 400px; }
+    .mailing .logo {
+      position: relative;
+      bottom: 30px; }
+    .mailing .text {
+      font-size: 1.2rem; }
+    .mailing .custom-input {
+      width: 300px;
+      height: 40px;
+      font-size: 1rem;
+      padding-left: 5px; }
+    .mailing .form-submit {
+      height: 40px;
+      width: 70px;
+      top: 2px;
+      font-size: 1.3rem;
+      float: right; }
+  .footer_icon {
+    width: 35px;
+    height: 34px;
+    padding: 3px; }
+  .logo_yebo {
+    width: 55px;
+    height: 36px; }
+  .footer {
+    height: 400px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    .footer .content {
+      height: 70%;
+      width: 80%;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between; }
+  .adress {
+    width: 235px; }
+    .adress .text {
+      font-size: .8rem;
+      text-align: left; }
+  .social_media {
+    width: 235px; }
+  .signature {
+    width: 235px;
+    font-size: .8rem; }
+  .logo_main_min {
+    position: absolute;
+    top: 20px;
+    left: 40%; } }
+
+@-webkit-keyframes fading {
+  from {
+    opacity: 0.7; }
+  to {
+    opacity: 1; } }
+
+@keyframes fading {
+  from {
+    opacity: 0.7; }
+  to {
+    opacity: 1; } }
+
+@-webkit-keyframes fading {
+  from {
+    opacity: 0.7; }
+  to {
+    opacity: 1; } }
+
+@keyframes fading {
+  from {
+    opacity: 0.7; }
+  to {
+    opacity: 1; } }
+
+/* basically all styling from now on */
+.menu_toggle {
+  z-index: 900;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+  cursor: pointer;
+  width: 100px;
+  height: 80px;
+  background-color: #282f35;
+  border-bottom-right-radius: 100%; }
+  .menu_toggle:active i {
+    opacity: 0.8; }
+  .menu_toggle i {
+    color: #f0f0f0; }
+  .menu_toggle .menu_open,
+  .menu_toggle .menu_close {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -15px;
+    margin-left: -12px;
+    transition: transform 0.7s cubic-bezier(1, 0.005, 0.24, 1); }
+  .menu_toggle .menu_open {
+    transform-origin: -100px -100px; }
+  .menu_toggle .menu_close {
+    transform: rotate(20deg);
+    transform-origin: -100px -160px; }
+
+.menu_items {
+  position: fixed;
+  bottom: 0;
+  left: 50px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+  .menu_items li {
+    height: 40px;
+    margin-bottom: 30px;
+    transform: translateX(-400px);
+    transition: transform 0.7s 0s cubic-bezier(1, 0.005, 0.24, 1); }
+    .menu_items li:nth-child(2) {
+      margin-left: 40px; }
+    .menu_items li:nth-child(3) {
+      margin-left: 80px; }
+    .menu_items li:nth-child(4) {
+      margin-left: 120px; }
+    .menu_items li:nth-child(5) {
+      margin-left: 160px; }
+    .menu_items li:last-child {
+      margin-left: 200px; }
+  .menu_items a {
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: color .2s; }
+    .menu_items a:hover {
+      color: #f0f0f0; }
+      .menu_items a:hover .icon:after {
+        border-color: #F37272; }
+    .menu_items a:active .icon {
+      color: #F37272; }
+
+/* Let's open up the menu */
+.shazam {
+  /*.content_inner {
+    height: 100%;
+  }*/ }
+  .shazam .content {
+    transform: rotate(-30deg); }
+  .shazam .menu_open {
+    transform: rotate(-20deg); }
+  .shazam .menu_close {
+    transform: rotate(0); }
+  .shazam .menu_items li {
+    transform: translateX(0);
+    transition: transform 0.35s 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+    .shazam .menu_items li:nth-child(2) {
+      transition-delay: .47s; }
+    .shazam .menu_items li:nth-child(3) {
+      transition-delay: .48s; }
+
+.menu_responsive {
+  display: none; }
+
+.menu_main {
+  width: 40%;
+  min-width: 620px;
+  margin: 0 auto;
+  position: relative;
+  top: 28px; }
+  .menu_main .menu_main_items {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; }
+    .menu_main .menu_main_items li {
+      list-style: none; }
+      .menu_main .menu_main_items li a {
+        text-decoration: none;
+        font-family: "Lato", sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        color: #4d4959; }
+      .menu_main .menu_main_items li .logo_main {
+        width: 94px;
+        height: 85px; }
+    .menu_main .menu_main_items .first_child {
+      margin-left: -40px; }
+
+@media all and (min-width: 1440px) {
+  .menu_main {
+    width: 60%;
+    max-width: 1440px; }
+    .menu_main .menu_main_items li a {
+      font-size: 1.3rem; }
+    .menu_main .menu_main_items li .logo_main {
+      width: 140px;
+      height: auto; }
+    .menu_main .menu_main_items .first_child {
+      margin-left: -40px; }
+  .icon_new-generation {
+    width: 65px;
+    height: auto; }
+  .title {
+    font-size: 1.5rem;
+    margin: 25px 0; }
+  .text {
+    font-size: 1.3rem; }
+  .bike {
+    flex-direction: row; }
+  .photo_container-bg {
+    height: 700px;
+    width: 65%; }
+  .bike_description {
+    width: 35%;
+    height: 700px; }
+  .icon_oliva-bike {
+    width: 60px;
+    height: auto; }
+  .description {
+    height: 60%;
+    padding: 50px; }
+    .description .content_center .title {
+      font-size: 1.5rem; }
+    .description .content_center .text {
+      font-size: 1rem;
+      width: 80%; }
+  .underline {
+    height: 1.5px;
+    width: 100px; }
+  .arrow {
+    width: 20px;
+    height: 20px;
+    top: -10px;
+    left: 48%; }
+  .icon_boriosa {
+    width: auto;
+    height: 50px; }
+  .photo_container-side {
+    height: 700px;
+    width: 100%; }
+  .center_column {
+    height: 700px;
+    width: 86%; }
+  .icon_hulot {
+    width: auto;
+    height: 50px; }
+  .twitter {
+    height: 550px; }
+  .icon_twitter {
+    width: 55px;
+    height: auto; }
+  .slide .title {
+    font-size: 1.7rem; }
+  .dotbox {
+    width: 70px;
+    height: 13px; }
+  .dot {
+    height: 11px;
+    width: 11px; }
+  .photo_box {
+    height: 500px;
+    flex-direction: row; }
+    .photo_box .left_box {
+      height: 500px;
+      width: 100%;
+      flex-direction: column; }
+      .photo_box .left_box .top_box {
+        width: 100%;
+        height: 50%;
+        flex-direction: row; }
+        .photo_box .left_box .top_box .bike1 {
+          height: 100%;
+          width: 50%; }
+        .photo_box .left_box .top_box .bike2 {
+          height: 100%;
+          width: 50%; }
+      .photo_box .left_box .bike3 {
+        height: 50%;
+        width: 100%; }
+    .photo_box .center_box {
+      height: 500px;
+      width: 100%;
+      flex-direction: row; }
+      .photo_box .center_box .bike4 {
+        height: 100%;
+        width: 50%; }
+      .photo_box .center_box .bike5 {
+        height: 100%;
+        width: 50%; }
+    .photo_box .right_box {
+      height: 500px;
+      width: 100%;
+      flex-direction: column; }
+      .photo_box .right_box .bike6 {
+        width: 100%;
+        height: 50%; }
+      .photo_box .right_box .bottom {
+        width: 100%;
+        height: 50%;
+        flex-direction: row; }
+        .photo_box .right_box .bottom .bike7 {
+          width: 50%;
+          height: 100%; }
+        .photo_box .right_box .bottom .bike8 {
+          width: 50%;
+          height: 100%; }
+  .shop_hover .title {
+    font-size: 0.6rem; }
+  .shop_banner {
+    height: 250px; }
+  .shop-btn {
+    width: 400px;
+    height: 80px;
+    line-height: 80px;
+    font-size: 1.5rem; }
+    .shop-btn:hover {
+      font-size: 1.2rem; }
+  .logo {
+    width: 120px;
+    height: auto; }
+  .mailing {
+    height: 400px; }
+    .mailing .logo {
+      position: relative;
+      bottom: 30px; }
+    .mailing .text {
+      font-size: 1.5rem; }
+    .mailing .custom-input {
+      width: 300px;
+      height: 60px;
+      font-size: 1.3rem;
+      padding-left: 5px; }
+    .mailing .form-submit {
+      height: 40px;
+      width: 70px;
+      top: 2px;
+      font-size: 1.5rem; }
+  .footer_icon {
+    width: 50px;
+    height: auto;
+    padding: 5px; }
+  .logo_yebo {
+    width: 55px;
+    height: 36px; }
+  .footer {
+    height: 250px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; }
+    .footer .content {
+      height: 50%;
+      width: 80%;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between; }
+  .adress {
+    width: 300px; }
+    .adress .text {
+      font-size: 1rem;
+      text-align: left; }
+  .social_media {
+    width: 300px; }
+  .signature {
+    width: 300px;
+    font-size: .9rem; } }
